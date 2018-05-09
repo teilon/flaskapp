@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    build: .
+    volumes:
+      - ./sockets:/sockets
+  server:
+    build: server
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./sockets:/sockets
+      - /tmp/ssl/:/etc/nginx/ssl/
+
