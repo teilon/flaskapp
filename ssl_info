@@ -1,5 +1,5 @@
-openssl req -x509 -nodes -days 365 -newkey rsa:4096 -subj "/C=DE/ST=Berlin/L=Berlin/O=Endocode AG/OU=IT/CN=185.143.173.37" -keyout /tmp/ssl/nginx.key -out /tmp/ssl/nginx.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:4096 -subj "/C=DE/ST=Berlin/L=Berlin/O=Endocode AG/OU=IT/CN=DOMEN" -keyout /tmp/ssl/nginx.key -out /tmp/ssl/nginx.crt
 
-curl -F "url=https://185.143.173.37" -F "certificate=@/tmp/ssl/nginx.crt" "https://api.telegram.org/bot578689180:AAHOg6itFICVOOPoDG-cZ4JNWfImBZu_IRw/setwebhook"
+curl -F "url=https://185.143.173.37" -F "certificate=@/tmp/ssl/nginx.crt" "https://api.telegram.org/botTOKEN/setwebhook"
 
-curl "https://api.telegram.org/bot578689180:AAHOg6itFICVOOPoDG-cZ4JNWfImBZu_IRw/getWebhookInfo"
+curl "https://api.telegram.org/botTOKEN/getWebhookInfo"
